@@ -1,0 +1,75 @@
+# Claude Code Configuration
+# MCP Servers Configuration
+
+# 로컬 파일시스템 접근
+[mcp.filesystem]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-filesystem", "C:\\"]
+
+# PowerShell 명령 실행
+[mcp.powershell]
+command = "node"
+args = ["C:\\MCP-Servers\\powershell-mcp\\src\\server.js"]
+
+# 다중 셸 환경 (PowerShell/CMD/Git Bash)
+[mcp.windows-cli]
+command = "node"
+args = ["C:\\win-cli-mcp-server\\dist\\index.js"]
+
+# Windows GUI 자동화
+[mcp.windows-mcp]
+command = "uv"
+args = ["--directory", "C:\\MCP-Servers\\Windows-MCP", "run", "main.py"]
+
+# Hugging Face Hub (모델/데이터셋/Space 검색)
+[mcp.huggingface]
+command = "npx"
+args = ["-y", "mcp-remote", "https://huggingface.co/mcp/sse"]
+
+# Sequential Thinking (순차적 사고)
+[mcp.sequential-thinking]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+
+# GitHub (저장소 관리)
+[mcp.github]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-github"]
+env = { GITHUB_PERSONAL_ACCESS_TOKEN = "YOUR_GITHUB_TOKEN_HERE" }
+
+# Playwright (브라우저 자동화)
+[mcp.playwright]
+command = "npx"
+args = ["-y", "@executeautomation/playwright-mcp-server"]
+
+# Puppeteer (브라우저 자동화)
+[mcp.puppeteer]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-puppeteer"]
+
+# Memory (대화 기억)
+[mcp.memory]
+command = "npx"
+args = ["-y", "@modelcontextprotocol/server-memory"]
+
+# Docker (컨테이너 관리)
+[mcp.docker]
+command = "npx"
+args = ["-y", "@shaneholloman/mcp-docker"]
+
+# Claude Code Settings
+[settings]
+# 기본 모델 설정
+default_model = "claude-sonnet-4-20250514"
+
+# 자동 승인 모드 (suggest/auto-edit/full-auto)
+approval_mode = "suggest"
+
+# 최대 토큰 수
+max_tokens = 4096
+
+# 안전 모드
+sandbox = true
+
+# 작업 디렉토리
+work_dir = "C:\\Users\\USER"

@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la \"$APPDATA/Claude Code\")",
+      "Bash(ls -la \"$LOCALAPPDATA/Claude Code\")"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "docker-gateway",
+    "filesystem",
+    "github",
+    "basic-memory",
+    "git",
+    "ollama",
+    "n8n",
+    "magic",
+    "TestSprite",
+    "sd-webui",
+    "google-search",
+    "tty",
+    "copilot",
+    "spec-kit",
+    "cli-orchestrator"
+  ]
+}
